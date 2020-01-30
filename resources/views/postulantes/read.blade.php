@@ -2,27 +2,33 @@
 @extends('layouts.app')
 
 {{-- definimos el titulo, se hereda de app.blade --}}
-@section('title', 'Postulantes Create ')
+@section('title', 'Postulantes Read ')
  
 {{-- heredamos del yield(content) --}}
 @section('content')
 
-<p> </p>
-    @foreach($postulantes as $postulante)
-        {{-- <nav class="navbar navbar-dark bg-primary">
-            <a href="#" class="navbar-brand">Id     Nombre      Apellido</a>
-        </nav> --}}
-        <ul class="list-inline navbar navbar-dark bg-info">
-            <li class="list-inline-item ml-4 ">  <p class="text-light">Id:</p>   {{$postulante->id}}</li>
-            <li class="list-inline-item ml-4 ">  <p class="text-light">Nombre:</p>   {{$postulante->nombre}}</li>
-            <li class="list-inline-item ml-5"><p class="text-light">Apellido:</p>  {{$postulante->apellido}}</li>
-            <li class="list-inline-item ml-5"><p class="text-light">Posicion:</p>   {{$postulante->posicion}}</li>
-            <li class="list-inline-item ml-4"><p class="text-light">Telefono:</p>  {{$postulante->numero}}</li>
-            <li class="list-inline-item ml-4"><p class="text-light">Correo:</p>    {{$postulante->correo}}</li>
-            <li class="list-inline-item ml-4"><p class="text-light">Pais:</p> {{$postulante->pais}}</li>
-            <li class="list-inline-item ml-4"><p class="text-light">Direccion:</p>    {{$postulante->direccion}}</li>
-
-        </ul>
+    <nav class="navbar  bg-info">
+        <p href="#" class="navbar-brand">Postulante</p>
+    </nav>
+    @foreach($userdatas as $u)
+        @if($loop->last)
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">{{$u->name}}{{$u->lastname}}</h5>
+                    <p class="card-text"> {{$u->Intro}}</p>
+                    <p class="card-text"><small class="text-muted">{{$u->numero}}</small></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+          @endif
     @endforeach
+
+
 
 @endsection

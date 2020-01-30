@@ -18,6 +18,10 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
+    // $credentials = $request->only('email','password');
+    // if(Auth::attempt($credentials)){
+    //     return redirect()intended(dashboard);
+  
 
     use AuthenticatesUsers;
 

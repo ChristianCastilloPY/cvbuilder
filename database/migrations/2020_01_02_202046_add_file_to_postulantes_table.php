@@ -17,7 +17,6 @@ class AddFileToPostulantesTable extends Migration
             $table->string('cv');
         });
     }
-
     /**
      * Reverse the migrations.
      *

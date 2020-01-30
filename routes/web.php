@@ -16,5 +16,23 @@ Route::get('/', function () {
 });
 
 Route::get('prueba','PruebaController@prueba');
+Route::get('login','PruebaController@login');
+Route::get('signin','PruebaController@signin');
+
 
 Route::resource('postulantes','PostulanteControler');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

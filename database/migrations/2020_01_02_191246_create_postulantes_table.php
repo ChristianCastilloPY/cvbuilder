@@ -48,6 +48,10 @@ class CreatePostulantesTable extends Migration
             $table->string('idioma');
             $table->string('nivelidioma');
 
+            // $table->biginteger('user_id')->unsigned();
+            // // relation
+            // $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }
